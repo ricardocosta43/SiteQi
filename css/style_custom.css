@@ -1,0 +1,14 @@
+.container-main{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.bg-light{
+    background-color: white!important;
+}
+.img-fluid{
+    height: 500px;
+    width: 2000px;
+}
+.main-div{
+    text-align: center;
+}
