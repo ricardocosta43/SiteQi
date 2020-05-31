@@ -1,14 +1,44 @@
+body, html, .owl-carousel {
+	height: 100%;
+  }
+
+.owl-carousel .owl-item img {
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.2;
+}
+.caption {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+.caption .title{
+	font-size: 6em;
+	font-weight: bold;
+}
+.caption .subtitle{
+	font-size: 3em;
+	font-weight: bold;
+}
+.caption-other{
+	font-size: 2em;
+	font-weight: bold;
+}
+.fa-whatsapp{
+	color: #4FCE5D;
+}
 .logo-img{
     width: 40px;
     height: 40px;
 }
-/* div-img{
-    overflow: hidden;
-}
-.img-fluid{
-    height: 500px;
-    width: 2000px;
-} */
 .main-div{
     text-align: center;
 }
@@ -44,8 +74,9 @@ header{
 .icons-cards i{
     color: #004879;
 }
-.cloudslider-index{
-    margin: auto;
+.navbar-light{
+	-webkit-transition: all 250ms;
+    transition: all 250ms;
 }
 
 /*---------------------

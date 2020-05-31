@@ -1,4 +1,47 @@
 $(document).ready(function () {
+    $('body').scrollspy({ target: '.navbar' });    
+    $(".navbar-light").css({
+        "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+    });
+
+    var tamanhoTela = $(window).width(); 
+    var posLoad = $(window).scrollTop();
+        var alturaLoad = 50;
+
+        if (alturaLoad < posLoad){
+            
+            $(".navbar-light").css({
+                "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+            });
+            $(".navbar-light .navbar-nav>li>a").css("line-height", "25px");
+            $(".navbar-light .navbar-brand").css("line-height", "25px");
+        } else {
+            $(".navbar-light").css({
+                "cssText" : "background-color : rgba(34,64,224,0.1) !important"
+            });
+            $(".navbar-light .navbar-nav>li>a").css("line-height", "20px");
+            $(".navbar-light .navbar-brand").css("line-height", "20px");
+        }
+
+        $(window).scroll(function(){                  
+            var alturaMax = 50;        
+            var posicao = $(window).scrollTop();
+
+            if (alturaMax < posicao){
+                $(".navbar-light").css({
+                    "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+                });
+                $(".navbar-light .navbar-nav>li>a").css("line-height", "25px");
+                $(".navbar-light .navbar-brand").css("line-height", "25px");
+            } else {
+                $(".navbar-light").css({
+                    "cssText" : "background-color : rgba(34,64,224,0.1) !important"
+                });
+                $(".navbar-light .navbar-nav>li>a").css("line-height", "20px");
+                $(".navbar-light .navbar-brand").css("line-height", "20px");
+            }
+        });
+
     $("#somos").on("click", function (e) {
         e.preventDefault();
         $(".nav-item").removeClass("active");
@@ -32,11 +75,22 @@ $(document).ready(function () {
         }, 800);       
     });
 
+    $('.owl-carousel').owlCarousel({
+        margin: 0,
+        loop: true,
+        autoWidth: false,
+        autoHeight: false,
+        items: 1,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+        autoplay: true,
+        autoplayTimeout: 3000,
+        mouseDrag: false,
+    })
+
     /* ============= slider =============== */
 
-    var tamanhoTela = $(window).width(); 
-
-    if (tamanhoTela < 500){
+    /* if (tamanhoTela < 500){
         $("#cloudslider-index").cloudSlider({
             width: 1333,
             height: 1200,
@@ -187,10 +241,10 @@ $(document).ready(function () {
                     easing			: 'linear',
                     delay			: 1	   
             }
-        });
+        }); */
 
         var posLoad = $(window).scrollTop();
         var alturaLoad = 50;
-    }
+    
 
 });

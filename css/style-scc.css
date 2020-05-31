@@ -1,0 +1,809 @@
+* {
+  font-family: 'Asap';
+}
+body {
+    position: relative; 
+    font-size: 15px;
+}
+.body-admin{
+    font-size: 14px;  
+    line-height: 1;
+}
+textarea {
+   resize: none;
+}
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+h1, h2, h3, h4,h5{
+  font-family: 'Asap';
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+pre{
+    background-color: transparent;
+}
+
+.input-sm{
+    font-size: 13px;
+}
+
+.input-sm,
+.btn,
+.alert,
+.captcha-form img{
+    border-radius: 0;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+
+input[name="captcha[input]"]{
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+} 
+
+.form-control:focus{
+    box-shadow: none;
+}
+.well{
+    border-radius: 0;
+}
+.thumbnail {
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}    
+.cab-geral{
+    font-size: 50px;
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+    .cab-geral{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 17px;
+    }
+
+    .cab-geral{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    input[name="captcha[input]"]{
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    } 
+}
+
+.table>thead>tr>th{
+    line-height: 2;
+}
+.table>thead>tr{
+    background-color: rgba(34,64,224,0.1);
+}
+
+.pagination {
+    margin: 6px 0;
+}
+.login-logo img{
+    display: block;
+    margin: auto;
+}
+.ns-box {
+    font-size: 100%;
+    z-index: 1031;
+}
+.ns-attached {
+    max-width: 350px;
+}
+
+/*----------------------------- carousel -------------------------------------*/
+
+.sky-background{
+    background-color: rgba(9,127,194,1);
+}
+.sky-background img{
+    opacity: 0.3;
+}
+.kr-sky .tec-empresa,
+.kr-sky .tec-desc,
+.kr-sky .tec-sistema,
+.kr-sky .tec-paginas-cab,
+.kr-sky .tec-paginas-desc{
+    text-shadow: 1px 1px 1px #07659C;   
+}
+
+/*.kr-sky .tec-empresa{
+    top: 150px;
+    left: 470px;
+    font-size: 100px;
+    color: #ffffff; 
+    border: 3px solid white; 
+    width: 410px; 
+    height: 135px; 
+    padding-left: 11px;
+}*/
+.kr-sky .tec-empresa{
+    top: 150px;
+    left: 320px;
+}
+
+.kr-sky .tec-sistema{
+    top: 480px; 
+    left: 100px; 
+    font-size: 40px; 
+    color: #ffffff;
+}
+
+.kr-sky .tec-desc{
+    top: 560px;
+    left: 100px; 
+    font-size: 20px; 
+    color: #ffffff; 
+    width: 700px;
+}
+
+.kr-sky .tec-saiba{
+    color: yellow; 
+    font-size: 16px;
+}
+
+.kr-sky .tec-paginas-cab{
+    top: 90px;
+    left: 20px;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.kr-sky .tec-paginas-desc{
+    top: 190px;
+    left: 25px; 
+    font-size: 30px; 
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {    
+    .kr-sky .tec-sistema{
+        top: 430px;  
+        font-size: 65px;
+    }
+    .kr-sky .tec-desc{
+        top: 530px; 
+        font-size: 30px; 
+        width: 1000px;
+    }    
+    .kr-sky .tec-paginas-cab{
+        top: 140px;
+    }
+    .kr-sky .tec-paginas-desc{
+        top: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .kr-sky .tec-empresa{
+        top: 200px;
+    }
+    .kr-sky .tec-sistema{
+        top: 550px;  
+        font-size: 70px;
+    }
+    .kr-sky .tec-desc{
+        top: 650px; 
+        font-size: 35px; 
+        width: 1100px;
+    }   
+    .kr-sky .tec-paginas-cab{
+        top: 160px;
+    }    
+    .kr-sky .tec-paginas-desc{
+        top: 260px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .kr-sky .tec-empresa{
+        top: 240px;
+    }
+    .kr-sky .tec-sistema{
+        top: 660px;  
+        font-size: 80px;
+    }
+    .kr-sky .tec-desc{
+        top: 770px; 
+        font-size: 42px; 
+        width: 1100px;
+    }  
+    .kr-sky .tec-paginas-cab{
+        top: 190px;
+        font-size: 80px;
+    }
+    
+    .kr-sky .tec-paginas-desc{
+        top: 320px;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .kr-sky .tec-empresa{
+        top: 260px;
+    }
+    .kr-sky .tec-paginas-cab{
+        top: 210px;
+        font-size: 100px;
+    }
+    
+    .kr-sky .tec-paginas-desc{
+        top: 350px;
+        font-size: 55px;
+    }
+}
+
+
+.kr-sky .tec-orca{
+    color: orange;
+}
+
+/* ---------------------------------- nav ------------------------------------*/
+.navbar-default{
+    background-color: rgba(34,64,224,0.1);
+    border: none;
+}
+
+.navbar-default, 
+.navbar-nav>li>a, 
+.navbar-brand{
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand{
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav .active a{
+    color: rgba(255,166,63,0.8);
+}
+
+.navbar-default .navbar-nav>li>a:focus{
+    color: white;
+}
+
+.navbar-default .navbar-nav .active,
+.navbar-default .navbar-nav .active a{
+    background-color:  black;
+}
+
+.navbar-default .navbar-nav .active a:hover{
+    background-color: rgba(255,255,255,0.1);
+    color: rgba(255,166,63,1);
+}
+
+.navbar-default .nav li a:hover{
+    background-color: transparent;
+}
+/* quando Ã© mobile */
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+    background-color: #d9edf7;    
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+@media (min-width: 768px) and (max-width: 811px) {
+    .nav>li>a {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-header{
+        background-color: rgba(34,64,224,0.1);
+    }
+    .navbar-default .navbar-nav{
+        background-color: rgba(34,64,224,0.8);
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar .login{
+        float: right;
+    }
+}
+
+/*------------------------------ foot ----------------------------------------*/
+footer {
+    min-height: 200px;
+    background-color: rgba(0,0,0,0.9);    
+    font-size: 13px;    
+}
+
+footer hr{
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+footer .tec-end{ /*pai*/
+    color: rgba(255,255,255,0.8);
+    padding: 15px;
+    line-height: 7px;
+}    
+
+footer .tec-end span{
+    color: rgba(255,255,255,0.4);
+}
+
+footer .tec-copy{
+    float: right;
+    color: rgba(255,255,255,0.3);
+    padding: 15px;
+}
+
+footer .tec-emp-foot{
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.tec-social a{
+    margin-right: 10px;
+    color: grey;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+
+.tec-social a:hover{
+    text-decoration: none;
+    opacity: 1;
+}
+
+.tec-social a:first-child:hover{
+    color: #3b5998;
+}
+.tec-social a:last-child:hover{
+    color: #d34836;
+}
+
+@media (max-width: 550px) {
+    footer .tec-end{ /*pai*/
+        font-size: 14px;
+    }    
+}
+
+@media (max-width: 492px) {
+    footer {
+        min-height: 260px;
+    }
+    footer .tec-end{ /*pai*/
+        line-height: 16px;
+    }  
+}
+
+/* --------------------------- index ----------------------------------------*/
+
+.index-tec-sobre,
+.index-ofer{
+    color: rgba(0,0,0,0.6);
+    padding: 30px; 
+    text-align: justify;
+}
+
+.index-ofer > div{    
+    border-right: 1px solid rgba(0,0,0,0.4);
+    min-height: 300px;
+}
+
+.index-ofer div:last-child{
+    border-right: none;
+}
+
+.index-ofer-col-cab{
+    text-align: center;
+}
+
+.index-ofer-col p{
+    margin-top: 10px;
+}
+
+.index-ofer-cab{
+    font-size: 35px;
+}
+
+@media (max-width: 1200px) {
+    .index-ofer .ofer-web{
+        border-right: none;
+    }    
+}
+
+@media (max-width: 992px) {
+    .index-ofer div{ 
+        min-height: 0;
+        border-right: none;
+    }
+    
+    .index-ofer-cab,
+    .index-ofer-col .fa{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .index-ofer div{
+        min-height: 0;
+        border-right: none;
+    }    
+    .index-tec-sobre,
+    .index-ofer{
+        padding: 10px; 
+    }
+    .index-ofer-cab,
+    .index-ofer-col .fa{
+        font-size: 30px;
+    }
+    .index-ofer-col p{
+        margin-top: 5px;
+    }
+    .index-ofer-col p{
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .index-ofer div{
+        min-height: 0;
+    }    
+    .index-ofer-cab,
+    .index-ofer-col .fa{
+        font-size: 25px;
+    }
+}
+
+/* ------------------------------ clientes -----------------------------------*/
+
+.cli-cab{
+    /*background-color: rgba(0,0,0,0.05);*/
+    background-color: rgba(255,91,13,0.2);
+}
+
+.cli-cab *,
+.index-ofer-col span{
+    display: inline-block;
+}
+
+.cli-cab span:first-child{
+    margin-right: 30px;
+}
+
+
+/* ---------------------------- contato -------------------------------------*/
+/*.contato-cab span:first-child{
+    margin-right: 30px;
+}*/
+
+.tec-contato-end.jumbotron{
+    border-radius: 0;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.tec-contato-end.jumbotron{
+    padding: 28px;
+}
+
+.tec-contato-end.jumbotron p{
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.jumbotron p.tec-emp-contato{
+    font-size: 25px;
+}
+
+/* ----------------------------- trabalhe conosco ----------------------------*/
+.tec-trab-selecao span{
+    font-size: 17px;
+}
+.jumbotron p.tec-trab-cab-sel{
+    font-size: 35px;
+}
+
+@media (max-width: 767px) {
+    .jumbotron p.tec-trab-cab-sel{
+        font-size: 28px;
+    }
+}
+
+.jumbotron p.tec-emp-contato{
+    font-size: 25px;
+}
+
+.fileinput .form-control{
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.glyphicon-file.fileinput-exists{
+    display: none;
+}
+/* ----------------------------- Sistemas ----------------------------------- */
+
+.tab-content,
+.tabs-left{
+    min-height: 520px;
+}
+
+@media (max-width: 991px) {
+    .tab-content,
+    .tabs-left{
+        min-height: 0;
+    }
+}
+
+.tec-modulos{
+    font-size: 30px;
+}
+
+.tec-sis-func{
+    font-size: 20px;
+}
+
+.tec-sistemas{
+    text-align: justify;
+}
+
+.tec-sistemas .fa,
+.index-ofer-col .fa{
+    margin-right: 7px;
+}
+
+.tabs-left>li>a{
+    border-radius: 0;
+}
+
+#tec-sistemas-cab,
+#sobre{
+    height: 60px;
+}
+
+@media (max-width: 767px) {
+    #tec-sistemas-cab,
+    #sobre{
+        height: 20px;
+    }
+}
+
+#accordion .panel-default{
+    border-radius: 0;
+}
+
+#accordion .panel-heading{
+    background-color: rgba(0,0,0,0.8);
+    color: rgba(255,156,14,0.8);
+    /*color: orange;*/
+    /*background-color: rgba(47,108,232,0.8);*/
+}
+
+/* ------------------------------ modal --------------------------------------*/
+
+.modal-content{
+    border-radius: 0;
+}
+
+.post-login{
+    display: none;
+}
+
+.modal .fa{
+    margin-right: 7px;
+}
+
+.modal-title{
+    font-size: 20px;
+}
+
+.modal label{
+    font-weight: normal;
+}
+
+@media (max-width: 991px) {
+    .modal-title{
+        font-size: 17px;
+    }
+    .modal label{
+        font-size: 15px; 
+    }
+}
+.login-forgot,
+.login-forgot-msg{
+    display: none;
+}
+.esqueci{
+    margin-left: 35px; 
+}
+/* ----------------------------------- nav admin --------------------------- */
+.navbar-inverse{
+    background-color: black;
+    opacity: 0.8;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav .active a{
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus{
+    color: white;
+}
+
+.navbar-inverse .navbar-nav .active,
+.navbar-inverse .navbar-nav .active a{
+    background-color:  rgba(255,255,255,0.2);
+}
+
+.navbar-inverse .navbar-nav .active a:hover{
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+.navbar-inverse .nav li a:hover{
+    background-color: transparent;
+}
+
+/* ------------------------------ admin ------------------------------ */
+.slideMe{
+    display: none;
+}
+#localizar{
+    width: 200px;
+}
+.edit-btn{
+    color: #f2aa25;
+}
+.body-admin .navbar{
+    min-height: 45px;    
+}
+.body-admin .navbar-nav>li>a {
+    line-height: 15px;    
+}
+@media (min-width: 766px) {
+    .body-admin .navbar-brand {
+        height: 45px;
+        line-height: 15px;
+        font-size: 17px;
+    }
+}
+.pop-menu{
+    padding: 8px 20px;
+    min-width: 200px;
+    border-radius: 0;
+}
+.pop-menu:before {
+    border: inset 6px;
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-color: transparent transparent #FFFFFF transparent;
+    border-bottom-style: solid;
+    position: absolute;
+    top: -12px;
+    right: 10px;
+    z-index: 89;
+}
+.dados-user{
+    padding: 5px 15px;
+    min-height: 62px;
+}
+.dados-user .dados-user-emp-img{
+    width: 115px;
+    height: auto;
+    display: inline;
+}
+.dados-user .dados-user-emp{
+    display: inline;
+    position: absolute;
+    top: 10%;
+}
+ /* ----------------------------------- sat ---------------------------------*/
+
+.form-sat .input-ano,
+.form-sat .pesq,
+.form-sat .zip{
+    margin-left: 5px;
+}
+.cab-sat td{
+    font-weight: bold;
+}
+.acoes-sat a:first-child{
+    margin-right: 7px; 
+}
+.sat-ok{
+    color: green;
+}
+.sat-nok{
+    color: red;
+}
+.sat-pdf{
+    color: #d34836;
+}
+.sat-pdf:hover{
+    color: #ac2925;
+}
+.sat-zip{
+    color: #0044cc;
+}
+
+.foot-sat{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    min-height: 40px;
+}
+
+/* ------------------------------ chamados ---------------------------------- */
+
+.form-chamados .pesquisa input{
+    width: 200px;
+}
+.form-sat .form-group{
+    margin-right: 5px;
+}
+.hist-ret{
+    border: none;
+}
+.det-cham *{
+    display: inline-table;
+}
+.table-det-cham{
+    border-left: 1px solid silver;
+    min-height: 600px;
+}
+.fa-ban{
+    color: red;
+}
+.badge-azul{
+    background-color: #5467FF;
+}
+.badge-vermelha{
+    background-color: #E85C51;
+}
+.badge-verde{
+    background-color: #49AB66;
+}
+.badge-cinza{
+    background-color: #99A1AB;
+}
+.edit-btn{
+    display: inline-block;
+    min-width: 20px;
+}
