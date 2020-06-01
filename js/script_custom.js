@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('body').scrollspy({ target: '.navbar' });    
     $(".navbar-light").css({
-        "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+        "cssText" : "background-color : rgba(0,34,56,0.9) !important"
     });
 
     var tamanhoTela = $(window).width(); 
@@ -11,16 +11,17 @@ $(document).ready(function () {
         if (alturaLoad < posLoad){
             
             $(".navbar-light").css({
-                "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+                "cssText" : "background-color : rgba(0,34,56,0.9) !important"
             });
             $(".navbar-light .navbar-nav>li>a").css("line-height", "25px");
             $(".navbar-light .navbar-brand").css("line-height", "25px");
         } else {
             $(".navbar-light").css({
-                "cssText" : "background-color : rgba(34,64,224,0.1) !important"
+                "cssText" : "background-color : rgba(0,34,56,0.3) !important"
             });
             $(".navbar-light .navbar-nav>li>a").css("line-height", "20px");
             $(".navbar-light .navbar-brand").css("line-height", "20px");
+            
         }
 
         $(window).scroll(function(){                  
@@ -29,19 +30,27 @@ $(document).ready(function () {
 
             if (alturaMax < posicao){
                 $(".navbar-light").css({
-                    "cssText" : "background-color : rgba(34,64,224,0.8) !important"
+                    "cssText" : "background-color : rgba(0,34,56,0.9) !important"
                 });
                 $(".navbar-light .navbar-nav>li>a").css("line-height", "25px");
                 $(".navbar-light .navbar-brand").css("line-height", "25px");
             } else {
                 $(".navbar-light").css({
-                    "cssText" : "background-color : rgba(34,64,224,0.1) !important"
+                    "cssText" : "background-color : rgba(0,34,56,0.3) !important"
                 });
                 $(".navbar-light .navbar-nav>li>a").css("line-height", "20px");
-                $(".navbar-light .navbar-brand").css("line-height", "20px");
+                $(".navbar-light .navbar-brand").css("line-height", "20px");   
             }
         });
 
+    $("#inicio").on("click", function (e) {
+        e.preventDefault();
+        $(".nav-item").removeClass("active");
+        $("#inicio").addClass("active");
+        $('html, body').stop().animate({
+            scrollTop: $("body").offset().top - 80
+        }, 800);    
+    });
     $("#somos").on("click", function (e) {
         e.preventDefault();
         $(".nav-item").removeClass("active");
