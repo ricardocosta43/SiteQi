@@ -21,7 +21,7 @@ a {
 .navbar-light .navbar-nav .nav-link.active, 
 .navbar-light .navbar-nav .nav-link.show, 
 .navbar-light .navbar-nav .show>.nav-link {
-	color: rgb(21, 88, 212);
+	color: rgb(245, 106, 51);
 	-webkit-transition: all 250ms;
 	-moz-transition: all, 250ms;
 	-ms-transition: all, 250ms;
@@ -32,7 +32,7 @@ a {
 /* color: rgba(255,166,63,0.8); */
 
 .navbar-light .navbar-nav>.nav-link:hover, .navbar-light .navbar-nav .nav-link:hover {
-	color: rgb(21, 88, 212);
+	color: rgb(245, 106, 51);
 	-webkit-transition: all 250ms;
 	-moz-transition: all, 250ms;
 	-ms-transition: all, 250ms;
