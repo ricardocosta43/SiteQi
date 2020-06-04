@@ -84,7 +84,7 @@ $(document).ready(function () {
         }, 800);
     });
 
-    $('.owl-carousel').owlCarousel({
+    /* $('.owl-carousel').owlCarousel({
         margin: 0,
         loop: true,
         autoWidth: false,
@@ -95,7 +95,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 3000,
         mouseDrag: false,
-    })
+    }) */
 
     /* ============= slider =============== */
 
@@ -103,7 +103,7 @@ $(document).ready(function () {
     const next = document.querySelector('#next');
     const prev = document.querySelector('#prev');
     const auto = true; // Auto scroll
-    const intervalTime = 5000;
+    const intervalTime = 10000;
     let slideInterval;
 
     const nextSlide = () => {
@@ -144,6 +144,22 @@ $(document).ready(function () {
         slideInterval = setInterval(nextSlide, intervalTime);
     }
 
+    /* notificação */
 
+    
 
 });
+
+function notSuccess(){
+    notif({
+        msg: "Email enviado com sucesso!",
+        type: "success"
+    });
+}
+
+function notError(){
+    notif({
+        msg: "Algo deu errado. Varifique os dados!",
+        type: "error"
+    });
+}
