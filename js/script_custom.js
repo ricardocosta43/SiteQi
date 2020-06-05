@@ -207,12 +207,12 @@ window.addEventListener("DOMContentLoaded", function () {
             return alert("ta errado");                    
         } */
 
-        $("#my-form").css("display", "none");       
-        $("#loader").css("display", "block");
-
         if (reCaptcha == "" || reCaptcha == null){
             return notError("Por favor verifique o reCaptcha.");  
         }
+
+        $("#my-form").css("display", "none");       
+        $("#loader").css("display", "block");
 
         var data = new FormData(form);
         ajax(form.method, form.action, data, success, error);
