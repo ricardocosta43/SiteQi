@@ -14,6 +14,30 @@
     <link rel="stylesheet" href="notifIt/css/notifIt.min.css">
     <link rel="stylesheet" href="css/style_custom.css">
     <link rel="Shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript">
+        var verifyCallback = function (response) {
+            alert(response);
+        };
+        var widgetId1;
+        var widgetId2;
+        var onloadCallback = function () {
+            // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+            // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+            widgetId1 = grecaptcha.render('recaptcha', {
+                'sitekey': '6LcWAwAVAAAAAEALfgZ13n8vY_p_BTo-zykfX_LF',
+                'theme': 'light'
+            });
+            /* widgetId2 = grecaptcha.render(document.getElementById('example2'), {
+                'sitekey': '6LcWAwAVAAAAAEALfgZ13n8vY_p_BTo-zykfX_LF'
+            });
+            grecaptcha.render('example3', {
+                'sitekey': '6LcWAwAVAAAAAEALfgZ13n8vY_p_BTo-zykfX_LF',
+                'callback': verifyCallback,
+                'theme': 'dark'
+            }); */
+        };
+    </script>
 </head>
 
 <body>
@@ -314,23 +338,50 @@
                             <br>
                             <div class="divider-header"></div>
                             <br><br>
+                            <div class="loader-div" id="loader">
+                                <div class="loader"></div>
+                            </div>
 
-                            <form id="my-form" action="https://formspree.io/mrgyqabd" method="POST" class="fale-conosco">
+                            <form id="my-form" action="https://formspree.io/mrgyqabd" method="POST"
+                                class="fale-conosco">
                                 <div class="form-group">
-                                  <label for="email">Email</label>
-                                  <input type="email" name="email"
-                                    class="form-control" id="" aria-describedby="helpId" placeholder="Email">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" required class="form-control" id=""
+                                        aria-describedby="helpId" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                  <label for="message">Mensagem</label>
-                                  <textarea type="text" name="message"
-                                    class="form-control" id="" aria-describedby="helpId" rows="5" 
-                                    placeholder="Escreva uma mensagem"></textarea>
+                                    <label for="message">Mensagem</label>
+                                    <textarea type="text" name="message" required class="form-control" id="message"
+                                        aria-describedby="helpId" rows="5" minlength="10"
+                                        placeholder="Escreva uma mensagem"></textarea>
                                 </div>
+                                <div id="recaptcha"></div>
+                                <br>
                                 <button class="btn btn-primary" id="my-form-button">Enviar</button>
                                 <p id="my-form-status"></p>
                             </form>
 
+                            <!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+                            <!-- <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+                                <div id="recaptcha"></div>
+                                <br>
+                                <input type="submit" value="getResponse">
+                            </form>
+                            <br> -->
+                            <!-- Resets reCAPTCHA widgetId2 upon submit. -->
+                            <!-- <form action="javascript:grecaptcha.reset(widgetId2);">
+                                <div id="example2"></div>
+                                <br>
+                                <input type="submit" value="reset">
+                            </form>
+                            <br> -->
+                            <!-- POSTs back to the page's URL upon submit with a g-recaptcha-response POST parameter. -->
+                            <!-- <form action="?" method="POST">
+                                <div id="example3"></div>
+                                <br>
+                                <input type="submit" value="Submit">
+                            </form> -->
+                            
 
                         </div>
                     </div>
@@ -341,7 +392,7 @@
     </div>
 
 
-
+    <br><br>
 
     <!-- rodapé -->
     <footer>
@@ -381,57 +432,7 @@
         }(jQuery)); var $mcj = jQuery.noConflict(true);</script> -->
 
     <!-- Place this script at the end of the body tag -->
-
-    <script>
-        window.addEventListener("DOMContentLoaded", function () {
-
-            // get the form elements defined in your form HTML above
-
-            var form = document.getElementById("my-form");
-            var button = document.getElementById("my-form-button");
-            var status = document.getElementById("my-form-status");
-
-            // Success and Error functions for after the form is submitted
-
-            function success() {
-                form.reset();
-                /* button.style = "display: none ";
-                status.innerHTML = "Thanks!"; */
-                notSuccess();
-            }
-
-            function error() {
-                /* status.innerHTML = "Oops! There was a problem."; */
-                notError();
-            }
-
-            // handle the form submission event
-
-            form.addEventListener("submit", function (ev) {
-                ev.preventDefault();
-                var data = new FormData(form);
-                ajax(form.method, form.action, data, success, error);
-            });
-        });
-
-        // helper function for sending an AJAX request
-
-        function ajax(method, url, data, success, error) {
-            var xhr = new XMLHttpRequest();
-            xhr.open(method, url);
-            xhr.setRequestHeader("Accept", "application/json");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState !== XMLHttpRequest.DONE) return;
-                if (xhr.status === 200) {
-                    success(xhr.response, xhr.responseType);
-                } else {
-                    error(xhr.status, xhr.response, xhr.responseType);
-                }
-            };
-            xhr.send(data);
-        }
-    </script>
-
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
     <script type='text/javascript' src='fontawesome-free-5.13.0-web/js/fontawesome.min.js'></script>
     <script type='text/javascript' src='notifIt/js/notifIt.min.js'></script>
     <script type='text/javascript' src='js/script_custom.js'></script>

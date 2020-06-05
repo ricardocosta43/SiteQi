@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
-
 body, html, .owl-carousel {
 	height: 100%;
 	font-family: "Varela Round";
@@ -14,10 +13,7 @@ a {
 	color: white;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, 
-.navbar-light .navbar-nav .nav-link.active, 
-.navbar-light .navbar-nav .nav-link.show, 
-.navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
 	color: rgb(245, 106, 51);
 	-webkit-transition: all 250ms;
 	-moz-transition: all, 250ms;
@@ -149,7 +145,7 @@ header {
 	transition: all 0.7s ease-in-out;
 }
 
-.slide.current{
+.slide.current {
 	opacity: 1;
 }
 
@@ -195,7 +191,7 @@ header {
 	font-weight: bold;
 }
 
-@media (max-width: 575px){
+@media (max-width: 575px) {
 	.slide .content {
 		/* bottom: -300px; */
 		left: 0;
@@ -209,18 +205,17 @@ header {
 		font-size: 4em;
 		font-weight: bold;
 	}
-	
 	.caption .subtitle {
 		font-size: 2em;
 		font-weight: bold;
 	}
-	
 	.caption-other {
 		font-size: 25px;
 		font-weight: bold;
 	}
 }
-.whatsapp-img{
+
+.whatsapp-img {
 	width: 74px;
 	height: 50px;
 }
@@ -228,11 +223,11 @@ header {
 /* Backgorund Images */
 
 .slide:first-child {
-	background: url('/assets/maintence1.jpg') no-repeat center top/cover;
+	background: url('../assets/maintence1.jpg') no-repeat center top/cover;
 }
 
 .slide:nth-child(2) {
-	background: url('/assets/maintence2.jpg') no-repeat center top/cover;
+	background: url('../assets/maintence2.jpg') no-repeat center top/cover;
 }
 
 .slide:nth-child(3) {
@@ -245,13 +240,56 @@ header {
 
 /* notificação */
 
-#ui_notifIt.success{
-    color: #155724;
+#ui_notifIt.success {
+	color: #155724;
 	background-color: #d4edda;
 	border-color: #c3e6cb;
 }
-#ui_notifIt.error{
-    color: #721c24;
+
+#ui_notifIt.error {
+	color: #721c24;
 	background-color: #f8d7da;
 	border-color: #f5c6cb;
+}
+
+/* loader */
+
+.loader-div{
+	/* position: absolute; */
+	height: 420px;
+	width: 100%;
+	display: none;
+}
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	/* Safari */
+	animation: spin 2s linear infinite;
+	margin-left: 40%;
+	margin-top: 20%;
+	position: absolute;
+}
+
+/* Safari */
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

@@ -143,23 +143,96 @@ $(document).ready(function () {
         // Run next slide at interval time
         slideInterval = setInterval(nextSlide, intervalTime);
     }
-
-    /* notificação */
-
-    
+        
 
 });
 
-function notSuccess(){
+function notSuccess(message){
     notif({
-        msg: "Email enviado com sucesso!",
+        msg: message,
         type: "success"
     });
 }
 
-function notError(){
+function notError(message){
     notif({
-        msg: "Algo deu errado. Varifique os dados!",
+        msg: message,
         type: "error"
     });
+}
+
+/* =============== submit form ================ */
+
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+
+    var form = document.getElementById("my-form");
+    var button = document.getElementById("my-form-button");
+    var status = document.getElementById("my-form-status");
+
+    function success() {
+        form.reset();
+        grecaptcha.reset(widgetId1);
+        /* button.style = "display: none ";
+        status.innerHTML = "Thanks!"; */
+
+        /* fazer delay na resposta */
+        setTimeout(function(){ 
+            $("#my-form").css("display", "block");       
+            $("#loader").css("display", "none"); 
+            notSuccess("Email enviado com sucesso!");
+        }, 2000);
+    }
+
+    function error() {
+        /* status.innerHTML = "Oops! There was a problem."; */
+        setTimeout(function(){ 
+            $("#my-form").css("display", "block");       
+            $("#loader").css("display", "none"); 
+            notError("Algo deu errado. Varifique os dados!");
+        }, 2000); 
+        grecaptcha.reset(widgetId1);       
+    }
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+
+        var message = document.getElementById("message");
+        var reCaptcha = grecaptcha.getResponse(widgetId1);
+
+        /* if (message.value.length < 3){
+            return alert("ta errado");                    
+        } */
+
+        $("#my-form").css("display", "none");       
+        $("#loader").css("display", "block");
+
+        if (reCaptcha == "" || reCaptcha == null){
+            return notError("Por favor verifique o reCaptcha.");  
+        }
+
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+        
+    });
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+        } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+        }
+    };
+    xhr.send(data);
 }
