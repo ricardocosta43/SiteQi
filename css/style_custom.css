@@ -124,14 +124,24 @@ header {
 	color: grey;
 }
 
-.fa-facebook {
+.social-footer {
 	font-size: 25px;
 	float: right;
-	margin: -5px;
+	margin-top: -7px;
+	margin-right: 10px;
 }
 
 .fa-facebook:hover {
 	color: #3b5998;
+	-webkit-transition: all 250ms;
+	-moz-transition: all, 250ms;
+	-ms-transition: all, 250ms;
+	-o-transition: all, 250ms;
+	transition: all 250ms;
+}
+
+.fa-twitter:hover {
+	color: #00acee;
 	-webkit-transition: all 250ms;
 	-moz-transition: all, 250ms;
 	-ms-transition: all, 250ms;
@@ -167,11 +177,12 @@ header {
 }
 
 @media only screen and (max-width: 575px) {
-	.fa-facebook {
+	.social-footer {
 		float: none;
 	}
 	.footer {
 		height: 9em;
+		text-align: center;
 	}
 }
 
